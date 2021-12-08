@@ -43,6 +43,7 @@ function findDublicateAndDelete(inputArray) {
 }
 // Given two strings, You have to find if the two strings are anagrams (same characters, same quantity). Only consider characters, regardless of spaces/punctuations.
 function checkAnagram(str1, str2) {
+  if (str1.length !== str2.length) return false;
   const reducer = (a, b) => {
     b in a ? (a[b] = a[b] + 1) : (a[b] = 1);
     return a;
